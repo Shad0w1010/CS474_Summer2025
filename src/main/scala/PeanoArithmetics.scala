@@ -12,7 +12,7 @@ object PeanoArithmetics {
   def main(args: Array[String]): Unit = {
     val zero = Zero
     val one = Succ(zero)
-    val two = Succ(one)
+    val two = Succ(Succ(Zero))
     println(add(one,two))
   }
 
