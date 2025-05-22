@@ -40,11 +40,13 @@ public class CrazyWithInheritance {
         C1 o = parent.new C1();
         C4 o1 = parent.new C6();
         C2 o2 = parent.new C3();
+        C4 o3 = parent.new C5();
+        C2 o4 = parent.new C3();
 
         int i = new CLI().getInput();
         System.out.println(i);
         
-        C1 arr[] = {o, o1, o2};
+        C1 arr[] = {o, o1, o2, o3, o4};
         arr[i].m();
         
     }
