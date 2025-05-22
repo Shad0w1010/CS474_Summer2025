@@ -15,9 +15,9 @@ public class CrazyWithInheritance {
         }
     }
     class C4 extends C1{
-        void m(){
+        /*void m(){
             System.out.println("c4");
-        }
+        }*/
     }
     class C5 extends C4{
         void m(){
@@ -25,9 +25,9 @@ public class CrazyWithInheritance {
         }
     }
     class C6 extends C4{
-        void m(){
-            System.out.println("c6");
-        }
+//        void m(){
+//            System.out.println("c6");
+//        }
     }
     
     
