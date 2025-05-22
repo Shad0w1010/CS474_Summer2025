@@ -1,7 +1,7 @@
-public class TestClass {
+public class ParentClass {
     int y = 1;
 
-    public TestClass() {
+    public ParentClass() {
         y = 2;
         f();
     }
@@ -10,19 +10,21 @@ public class TestClass {
         System.out.println("Value1 = " + String.valueOf(y));
     }
 
-    public static class B extends TestClass {
+    public static class Child extends ParentClass {
         int y = 3;
 
-        public B() {
+        public Child() {
+            
             f();
         }
 
         void f() {
+            
             System.out.println("Value2 = " + String.valueOf(y));
         }
     }
 
     public static void main(String[] args) {
-        new TestClass.B();
+        new Child();
     }
 }
