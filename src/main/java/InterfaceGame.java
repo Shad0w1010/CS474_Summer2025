@@ -1,4 +1,21 @@
 public class InterfaceGame {
+    interface SI{
+        void f();
+    }
+    interface SII extends SI{
+        void g();
+    }
+    
+    class C_SII implements SII{
+        @Override
+        public void f() {
+            
+        }
+        @Override
+        public void g() {
+            System.out.println("I1.g");
+        }
+    }
     interface Campus { 
         interface Bldgs{
             interface Floor{
