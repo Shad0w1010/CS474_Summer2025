@@ -3,7 +3,11 @@ object PrimitiveCalculator {
     case Value(v:Int)
     case Add(op1: CalcOps, op2:CalcOps)
     case Mult(op1: CalcOps, op2:CalcOps)
+    case methodInvoke(name: String, params: List[Any])
   }
+  var error: Int = 0
+  def div(op1:Float, op2:Float): Float =
+    if op2 != 0.0f then op1/op2 else error = -1;0
 
   def eval(exp: CalcOps): Int = {
     exp match {
