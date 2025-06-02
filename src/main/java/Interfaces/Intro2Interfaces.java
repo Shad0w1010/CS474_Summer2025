@@ -1,3 +1,5 @@
+package Interfaces;
+
 public class Intro2Interfaces {
     interface Empty {}
     interface Empty1 {}

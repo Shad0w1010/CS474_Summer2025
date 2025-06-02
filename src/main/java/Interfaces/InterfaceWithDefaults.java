@@ -1,3 +1,5 @@
+package Interfaces;
+
 public class InterfaceWithDefaults {
     interface Panel4ElectronicDevice {
         default void on_off(boolean on) {

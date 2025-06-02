@@ -1,3 +1,5 @@
+package Interfaces;
+
 public class InterfaceGame {
     interface SI{
         void f();
