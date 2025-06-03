@@ -23,7 +23,18 @@ object BasicLambdaFromLec7 {
     (i:String)=>g(f(i))
 
   val fff: Int => Int = (i:Int)=> _f(ff(i))
+  
+  def plainOldFunction(i:Int):Int = i+1
+  def plainOldFunction4Functions(f: String=>Int=>String, s:String, p:Int):Int=>String =
+    (i:Int)=>f(s)(p).concat("::cs474")
+  
+  val intVar:Int = 6
+  val result = plainOldFunction(intVar)
+  
   def main(args: Array[String]): Unit = {
+    println {
+      plainOldFunction4Functions((s: String) => (i: Int) => (s.length + i).toString, "Mark", 10)(2)
+    }
     println(lambdaExp(x=>x+10)(2))
     println(_f(2))
     println(ff(2))
