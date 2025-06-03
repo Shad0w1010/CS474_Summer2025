@@ -19,6 +19,9 @@ object BasicLambdaFromLec7 {
 //  s4: i=>(i=>(i=>((x:Int)=>x) f(i))f(i)))f(i))
 //
 
+  def composer(f: String =>Int, g: Int =>String): String=>String =
+    (i:String)=>g(f(i))
+
   val fff: Int => Int = (i:Int)=> _f(ff(i))
   def main(args: Array[String]): Unit = {
     println(lambdaExp(x=>x+10)(2))
@@ -28,5 +31,8 @@ object BasicLambdaFromLec7 {
     val d = new DoubleApp
     println(d(2))
     println("fN: " + applyFuncNtimes(3, x=>x+1)(10))
+    println{
+      composer((s:String)=>s.length, (i:Int)=>i.toString.reverse)("Mark CS474 Isaac")
+    }
   }
 }

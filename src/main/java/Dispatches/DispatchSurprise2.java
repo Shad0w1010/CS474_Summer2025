@@ -1,7 +1,7 @@
 package Dispatches;
 
 public class DispatchSurprise2 {
-    static int C = 0;
+    static final int C = 0;
     interface Counter {
         int C = 0;
         default int bump() {
