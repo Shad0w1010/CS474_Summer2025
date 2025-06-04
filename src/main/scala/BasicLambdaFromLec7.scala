@@ -19,8 +19,8 @@ object BasicLambdaFromLec7 {
 //  s4: i=>(i=>(i=>((x:Int)=>x) f(i))f(i)))f(i))
 //
 
-  def composer(f: String =>Int, g: Int =>String): String=>String =
-    (i:String)=>g(f(i))
+  def composer[A,B,C](f: B =>C, g: A =>B): A=>C =
+    (i:A)=>f(g(i))
 
   val fff: Int => Int = (i:Int)=> _f(ff(i))
   
@@ -43,7 +43,7 @@ object BasicLambdaFromLec7 {
     println(d(2))
     println("fN: " + applyFuncNtimes(3, x=>x+1)(10))
     println{
-      composer((s:String)=>s.length, (i:Int)=>i.toString.reverse)("Mark CS474 Isaac")
+      composer((i:Int)=>i.toString.reverse, (s:String)=>s.length)("Mark CS474 Isaac")
     }
   }
 }
