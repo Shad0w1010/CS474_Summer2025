@@ -2,6 +2,7 @@ object CombinatorsXformers {
 
   case class SmartMeterData[T](v:T):
     def map[S](f: T => S): SmartMeterData[S] = SmartMeterData(f(v))
+    def flatMap[S](f: T => SmartMeterData[S]): SmartMeterData[S] = f(v)
 
   def main(args: Array[String]): Unit = {
     val input = SmartMeterData(2.35d)
@@ -11,6 +12,9 @@ object CombinatorsXformers {
     println(o3)
     println{
       SmartMeterData(2).map(_.toString).map(v=>v+ "  -" +v).map(_.reverse)
+    }
+    println {
+      SmartMeterData(10).flatMap(v=>SmartMeterData(v+1)).flatMap(v=>SmartMeterData(2*v))
     }
   }
 }
