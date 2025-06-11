@@ -14,11 +14,11 @@ object ConAndContra:
 
 
   @main def runMain_ConAndContra(): Unit =
-    val ms: MyStorage[Any] = MyStorage("cs474", "Summer2023")
+    val ms: MyStorage[Any] = MyStorage("cs474", "Summer2025")
     ms.v1 = 2
     ms.set(10,2)
     println(ms)
 
-    val ms1: MyStorageCV[Any] = MyStorageCV[String]("cs474", "Summer2023")
-    val ms2 = MyStorageCV[String]("cs474", "Summer2023").set(10, 2)
+    val ms1: MyStorageCV[Any] = MyStorageCV[String]("cs474", "Summer2025")
+    val ms2: MyStorageCV[String] = MyStorageCV[String]("cs474", "Summer2025").set("10", 2)
     println(ms2)

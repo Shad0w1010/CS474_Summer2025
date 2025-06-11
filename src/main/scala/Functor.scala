@@ -8,5 +8,5 @@ object Functor {
   lazy val numbers: List[Int] = List.range(1, 4)
 
   @main def runExtension() =
-    println(numbers.fmap(_ * 10))
+    println(numbers.fmap(_ * 10).fmap(_+1).fmap(_.toHexString))
 }
