@@ -6,6 +6,9 @@ object FuncAsObj {
   class MyOwnFuncEquivalent extends Function1[Int, String]{
     override def apply(v1: Int): String = v1.toString + v1.toString
   }
+  object MyOwnFuncEquivalent {
+
+  }
 
   def main(args: Array[String]): Unit = {
     println {
