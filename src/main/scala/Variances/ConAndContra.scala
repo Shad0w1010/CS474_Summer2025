@@ -1,3 +1,5 @@
+package Variances
+
 object ConAndContra:
   case class MyStorage[T](var v1:T, var v2: T):
     def get: (T,T) = (v1, v2)
